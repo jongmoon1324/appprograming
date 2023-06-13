@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>채널 등록 페이지</title>
+    <link rel="stylesheet" href="style.css">
+    <script language="javascript">
+
+        function Input() 
+        {
+
+            if(document.frmInput.CName.value == "") {
+                alert("채널명이 비어있습니다.");
+                document.frmInput.CName.focus();
+                return false;
+            }
+            if(document.frmInput.Channel.value == "") {
+                alert("채널(핸들)이 비어있습니다.");
+                document.frmInput.Channel.focus();
+                return false;
+            }
+            if(document.frmInput.Main_Video.value == "") {
+                alert("메인영상 아이디가 비어있습니다..");
+                document.frmInput.Main_Video.focus();
+                return false;
+            }
+
+
+            document.frmInput.submit();
+        }
+
+    </script>
+</head>
+<body>
+    <div class="wrap">
+    <form name="frmInput" action="dataWrite.php" method="post" enctype="multipart/form-data" >
+        
+        <h4 style="text-align: center;">당신의 채널을 등록해주세요!<br>등록은 우리에게 큰 힘이 됩니다!!</h4>
+        <div class="box2">
+        <table id="reg" style="margin:auto;">
+        <tr>
+        <td><label for="CName">채널명 : </label></td>
+        <td><input type="text" name="CName" id="CName" placeholder="작성 예시: 정종문" required></td>
+        </tr>
+
+        <tr>
+        <td><label for="Channel">채널 핸들 : </label></td>
+        <td><input type="text" name="Channel" id="Channel"  placeholder="작성 예시: @Moonbear_b" required></td>
+        </tr>
+
+        <tr>
+        <td><label for="Main_Video"></label>영상 링크 : </td>
+        <td><input type="text" name="Video" id="Main_Video"  placeholder="작성 예시: BBdC1rl5sKY" required></td>
+        </tr>
+        </div>
+        </table>
+        <br><br>
+        <div id="submit">
+        <button type="button" onclick="Input()">등록하기</button>
+        <br><br>
+        <button type="button" onclick="location.href='videos.php'">메인으로</button>
+        </div>
+    </form>
+    </div>
+</div>
+</body>
+</html>

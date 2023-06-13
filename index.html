@@ -1,0 +1,58 @@
+<meta charset="utf-8">
+<html>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        var $MV = $_POST['MV'];
+        </script>
+
+        <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "350px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+       <style>
+           listbtn{
+               width:40px;
+               height:40px;
+               border-radius: 5px;
+               background-color: white;
+               border-color:gray;
+               color: gray;
+           }
+           listbtn:hover{
+               background-color: skyblue;
+           }
+        </style> 
+    
+    </head>
+
+    <body>
+
+        <div id="btn-group">
+<button class="listbtn" onclick="openNav()" style="width:40px;height:40px; border-radius: 5px; background-color: white; border-color:skyblue; color: gray;" onmouseover="this.style.backgroundColor='skyblue'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='gray';">≡</button>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="login.php">로그인해주세요!</a>
+            <hr>
+        </div>
+        <input type="search" id="search_bar" onclick="location.href='login.php'" style="width:350px;height:40px;"></image>
+
+        <div class="wrap">
+        <hr>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <div class="box3" style="text-align: center;">
+        <h1> 로그인 후 이용해주세요</h1>
+        <button type="button" onclick="location.href='login.php'" style="margin: auto; height: 75px; width:300px;" >로그인</button>
+        <h5 style="color: gray;">회원이 아니시라면? <a style="color:gray; text-decoration-line: none;" href="member_create.html">>회원가입</a></h5>
+     </div>
+        </div>
+        </body>    
+        </html>
